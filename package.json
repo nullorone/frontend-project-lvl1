@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.1.0",
+  "version": "1.2.2",
   "description": "Brain Games",
   "main": "src/index.js",
   "type": "module",
@@ -27,5 +27,10 @@
   "homepage": "https://github.com/nullorone/frontend-project-lvl1#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
   }
 }
