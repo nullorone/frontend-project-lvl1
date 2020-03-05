@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/nullorone/frontend-project-lvl1.git"
   },
+  "engines": {
+    "node": ">=13.10.1",
+    "npm": ">=6.13.7"
+  },
   "keywords": [],
   "author": "nullorone:sy.v@mail.ru",
   "license": "ISC",
