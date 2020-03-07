@@ -2,3 +2,6 @@
 [![Node.js CI](https://github.com/nullorone/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)](https://github.com/nullorone/frontend-project-lvl1/actions)
 
 # Консольная игра "Brain Games"
+
+## Пример запуска игры
+[![asciicast](https://asciinema.org/a/vn7EjnOSvy4QChpJKIh3EPAIt.svg)](https://asciinema.org/a/vn7EjnOSvy4QChpJKIh3EPAIt)

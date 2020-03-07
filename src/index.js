@@ -1,8 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const getNameUser = () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}`);
-};
+// Print message in console
+const printMessage = (message) => console.log(message);
 
-export default getNameUser;
+const getUserName = () => readlineSync.question('May I have your name? ');
+
+const greetingUser = (name) => printMessage(`Hello, ${name}`);
+
+
+export { getUserName, greetingUser, printMessage };
