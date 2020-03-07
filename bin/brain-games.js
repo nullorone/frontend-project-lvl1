@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-import { name, getNameUser } from '../src/index.js';
+import { getUserName, greetingUser, printMessage } from '../src/index.js';
 import getEvenGameAnswers from './brain-even.js';
 
+printMessage('Welcome to the Brain Games!');
 
-console.log('Welcome to the Brain Games!');
-getNameUser();
-getEvenGameAnswers(name);
+const userName = getUserName();
+
+greetingUser(userName);
+getEvenGameAnswers(userName);
