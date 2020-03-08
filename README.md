@@ -3,5 +3,11 @@
 
 # Консольная игра "Brain Games"
 
-## Пример запуска игры
-[![asciicast](https://asciinema.org/a/vn7EjnOSvy4QChpJKIh3EPAIt.svg)](https://asciinema.org/a/vn7EjnOSvy4QChpJKIh3EPAIt)
+1. Выберите игру в которую хотите сыграть или выберите 0 если передумали играть.
+[![asciicast](https://asciinema.org/a/quSwtcfjGe4SfhnPvlcR6GDeO.svg)](https://asciinema.org/a/quSwtcfjGe4SfhnPvlcR6GDeO)
+
+1. Пример игры в чётность
+[![asciicast](https://asciinema.org/a/HuhSEiOhex8CY1Zdh2mToUGXP.svg)](https://asciinema.org/a/HuhSEiOhex8CY1Zdh2mToUGXP)
+
+1. Пример игры в "калькулятор"
+[![asciicast](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h.svg)](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h)
