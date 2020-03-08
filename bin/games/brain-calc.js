@@ -40,7 +40,6 @@ const answer = (gameQuestion) => getMathResult(
 
 const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.operator} ${gameQuestion.second}`;
 
-
 const getCalcGameAnswers = (userName) => commonGame(userName, RULE, question, answer, textQuestion);
 
 export default getCalcGameAnswers;

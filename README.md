@@ -11,3 +11,6 @@
 
 1. Пример игры в "калькулятор"
 [![asciicast](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h.svg)](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h)
+
+1. Пример игры в "НОД"
+[![asciicast](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f.svg)](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f)

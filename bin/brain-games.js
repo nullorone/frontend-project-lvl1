@@ -7,8 +7,9 @@ import {
 } from '../src/index.js';
 import getEvenGameAnswers from './games/brain-even.js';
 import getCalcGameAnswers from './games/brain-calc.js';
+import getGcdGameAnswers from './games/brain-gcd.js';
 
-const GAMES = ['even', 'calc'];
+const GAMES = ['even', 'calc', 'gcd'];
 
 const choiceGame = (index, name) => {
   switch (GAMES[index]) {
@@ -17,6 +18,9 @@ const choiceGame = (index, name) => {
       break;
     case (GAMES[1]):
       getCalcGameAnswers(name);
+      break;
+    case (GAMES[2]):
+      getGcdGameAnswers(name);
       break;
     default:
       throw new Error('Bad choice. Game not found.');
