@@ -8,8 +8,9 @@ import {
 import getEvenGameAnswers from './games/brain-even.js';
 import getCalcGameAnswers from './games/brain-calc.js';
 import getGcdGameAnswers from './games/brain-gcd.js';
+import getProgressionGameAnswers from './games/brain-progression.js';
 
-const GAMES = ['even', 'calc', 'gcd'];
+const GAMES = ['even', 'calc', 'gcd', 'progression'];
 
 const choiceGame = (index, name) => {
   switch (GAMES[index]) {
@@ -21,6 +22,9 @@ const choiceGame = (index, name) => {
       break;
     case (GAMES[2]):
       getGcdGameAnswers(name);
+      break;
+    case (GAMES[3]):
+      getProgressionGameAnswers(name);
       break;
     default:
       throw new Error('Bad choice. Game not found.');
