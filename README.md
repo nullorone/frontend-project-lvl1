@@ -9,8 +9,11 @@
 1. Пример игры в чётность
 [![asciicast](https://asciinema.org/a/HuhSEiOhex8CY1Zdh2mToUGXP.svg)](https://asciinema.org/a/HuhSEiOhex8CY1Zdh2mToUGXP)
 
-1. Пример игры в "калькулятор"
+1. Пример игры в "Калькулятор"
 [![asciicast](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h.svg)](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h)
 
 1. Пример игры в "НОД"
 [![asciicast](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f.svg)](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f)
+
+1. Пример игры "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ.svg)](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ)    
