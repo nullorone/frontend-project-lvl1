@@ -1,5 +1,5 @@
 import {
-  getRandomIndexOfArray,
+  getRandomIndexToLimit,
   generateNumber,
   commonGame,
 } from '../../src/index.js';
@@ -8,7 +8,7 @@ const MATH_OPERATORS = ['+', '-', '*'];
 const RULE = 'What is the result of the expression?';
 
 const getRandomMathOperator = (operators) => {
-  const indexOperator = getRandomIndexOfArray(operators);
+  const indexOperator = getRandomIndexToLimit(operators.length);
 
   return operators[indexOperator];
 };
