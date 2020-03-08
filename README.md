@@ -3,7 +3,7 @@
 
 # Консольная игра "Brain Games"
 
-##Установка
+## Установка
 
 1. Склонируйте себе репозиторий.
 
@@ -11,7 +11,7 @@
 * `make install` - для владельцев macOS/Linux
 * `npm install` - для Windows
 
-##Использование
+## Использование
 
 * `make start` - для владельцев macOS/Linux
 * `npx node bin/brain-games.js` - для Windows
