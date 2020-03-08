@@ -16,4 +16,7 @@
 [![asciicast](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f.svg)](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f)
 
 1. Пример игры "Арифметическая прогрессия"
-[![asciicast](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ.svg)](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ)    
+[![asciicast](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ.svg)](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ)
+
+1. Пример игры "Простое ли число?"
+[![asciicast](https://asciinema.org/a/Pq4Q3Re4zlxn0FpvkSBajYB5G.svg)](https://asciinema.org/a/Pq4Q3Re4zlxn0FpvkSBajYB5G)
