@@ -1,7 +1,7 @@
 import {
   generateNumber,
   commonGame,
-} from '../../src/index.js';
+} from '../utils/utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

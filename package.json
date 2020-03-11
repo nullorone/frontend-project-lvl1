@@ -1,14 +1,19 @@
 {
-  "name": "frontend-project-lvl1",
-  "version": "3.3.2",
-  "description": "Brain Games",
+  "name": "brain-games-project",
+  "version": "4.0.0",
+  "description": "Lesson project from Hexlet.io",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx eslint ."
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-prime": "bin/brain-prime.js",
+    "brain-progression": "bin/brain-progression.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +23,11 @@
     "node": ">=13.10.1",
     "npm": ">=6.13.7"
   },
-  "keywords": [],
+  "keywords": [
+    "frontend",
+    "brain",
+    "games"
+  ],
   "author": "nullorone:sy.v@mail.ru",
   "license": "ISC",
   "bugs": {

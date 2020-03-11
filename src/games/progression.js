@@ -1,4 +1,4 @@
-import { generateNumber, getRandomIndexToLimit, commonGame } from '../../src/index.js';
+import { generateNumber, getRandomIndexToLimit, commonGame } from '../utils/utils.js';
 
 const RULE = 'What number is missing in the progression?';
 const PROGRESSION_ITERATOR = 2;
@@ -27,9 +27,9 @@ const getReplacedValue = (progression) => {
     throw new Error('Replaced value not found');
   }
 
-  const prevValueOfReplaced = progression[replacedIndex - 1];
-
-  return prevValueOfReplaced + PROGRESSION_ITERATOR;
+  return replacedIndex === 0
+    ? progression[replacedIndex + 1] - PROGRESSION_ITERATOR
+    : progression[replacedIndex - 1] + PROGRESSION_ITERATOR;
 };
 
 const question = () => getProgression();

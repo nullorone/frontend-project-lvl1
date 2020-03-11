@@ -1,4 +1,4 @@
-import { commonGame, generateNumber } from '../../src/index.js';
+import { commonGame, generateNumber } from '../utils/utils.js';
 
 const RULE = 'Find the greatest common divisor of given numbers';
 
