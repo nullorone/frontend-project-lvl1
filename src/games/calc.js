@@ -2,7 +2,7 @@ import {
   getRandomIndexToLimit,
   generateNumber,
   commonGame,
-} from '../index.js';
+} from '../utils/utils.js';
 
 const MATH_OPERATORS = ['+', '-', '*'];
 const RULE = 'What is the result of the expression?';

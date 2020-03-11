@@ -1,7 +1,7 @@
 import {
   generateNumber,
   commonGame,
-} from '../index.js';
+} from '../utils/utils.js';
 
 const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
