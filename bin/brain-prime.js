@@ -2,6 +2,6 @@
 import { startGame } from '../src/index.js';
 import getPrimeGameAnswers from '../src/games/prime.js';
 
-startGame();
+const name = startGame();
 
-getPrimeGameAnswers();
+getPrimeGameAnswers(name);
