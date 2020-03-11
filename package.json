@@ -1,5 +1,5 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "brain-games-project",
   "version": "3.3.2",
   "description": "Lesson project from Hexlet.io",
   "main": "src/index.js",
@@ -23,7 +23,11 @@
     "node": ">=13.10.1",
     "npm": ">=6.13.7"
   },
-  "keywords": ["frontend", "brain", "games"],
+  "keywords": [
+    "frontend",
+    "brain",
+    "games"
+  ],
   "author": "nullorone:sy.v@mail.ru",
   "license": "ISC",
   "bugs": {
