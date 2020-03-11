@@ -21,43 +21,43 @@ const generateNumber = () => {
   return Math.floor(Math.random() * decimalOrder[indexDecimalOrder]);
 };
 
-// Print message in console
-const printMessage = (message) => console.log(message);
-
-const getUserName = () => readlineSync.question('May I have your name? ');
-
-const greetingUser = (name) => printMessage(`Hello, ${name}`);
 
 const commonGame = (userName, rule, question, answer, textQuestion) => {
   let countCorrectAnswer = 0;
 
-  printMessage(rule);
+  console.log(rule);
 
   while (countCorrectAnswer < AMOUNT_CORRECT_ANSWER) {
     const gameQuestion = question();
     const gameAnswer = answer(gameQuestion);
     const gameTextQuestion = textQuestion(gameQuestion);
 
-    printMessage(Text.QUESTION(gameTextQuestion));
+    console.log(Text.QUESTION(gameTextQuestion));
     const userAnswer = readlineSync.question(Text.USER_ANSWER);
 
     if (userAnswer.toString() === gameAnswer.toString()) {
       countCorrectAnswer += 1;
-      printMessage(Text.CORRECT);
+      console.log(Text.CORRECT);
     } else {
-      printMessage(Text.WRONG(userAnswer, gameAnswer));
-      printMessage(Text.TRY_AGAIN(userName));
+      console.log(Text.WRONG(userAnswer, gameAnswer));
+      console.log(Text.TRY_AGAIN(userName));
       return;
     }
   }
 
-  printMessage(Text.CONGRATULATION(userName));
+  console.log(Text.CONGRATULATION(userName));
+};
+
+const startGame = () => {
+  console.log('Welcome to the Brain Games!\n');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}`);
+
+  return name;
 };
 
 export {
-  getUserName,
-  greetingUser,
-  printMessage,
+  startGame,
   AMOUNT_CORRECT_ANSWER,
   Text,
   generateNumber,

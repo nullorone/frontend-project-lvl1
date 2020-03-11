@@ -1,4 +1,4 @@
-import { generateNumber, getRandomIndexToLimit, commonGame } from '../../src/index.js';
+import { generateNumber, getRandomIndexToLimit, commonGame } from '../index.js';
 
 const RULE = 'What number is missing in the progression?';
 const PROGRESSION_ITERATOR = 2;
