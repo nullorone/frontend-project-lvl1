@@ -11,6 +11,7 @@ import getGcdGameAnswers from './games/brain-gcd.js';
 import getProgressionGameAnswers from './games/brain-progression.js';
 import getPrimeGameAnswers from './games/brain-prime.js';
 
+// Add after refactor
 const GAMES = ['even', 'calc', 'gcd', 'progression', 'prime'];
 
 const choiceGame = (index, name) => {
