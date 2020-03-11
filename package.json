@@ -1,11 +1,11 @@
 {
   "name": "frontend-project-lvl1",
   "version": "3.3.2",
-  "description": "Brain Games",
+  "description": "Lesson project from Hexlet.io",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx eslint ."
   },
   "bin": {
     "brain-games": "bin/brain-games.js"
@@ -18,7 +18,7 @@
     "node": ">=13.10.1",
     "npm": ">=6.13.7"
   },
-  "keywords": [],
+  "keywords": ["frontend", "brain", "games"],
   "author": "nullorone:sy.v@mail.ru",
   "license": "ISC",
   "bugs": {
