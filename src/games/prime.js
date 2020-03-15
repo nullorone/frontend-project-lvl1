@@ -1,7 +1,5 @@
-import {
-  generateNumber,
-  commonGame,
-} from '../utils/utils.js';
+import commonGame from '../index.js';
+import { generateNumberOfRange } from '../utils/utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -16,18 +14,12 @@ const checkPrimeValue = (value) => {
   return startIterator === limitIterator;
 };
 
-const question = () => generateNumber();
+const question = () => generateNumberOfRange();
 
 const answer = (gameQuestion) => (checkPrimeValue(gameQuestion) ? 'yes' : 'no');
 
 const textQuestion = (gameQuestion) => gameQuestion;
 
-const getPrimeGameAnswers = (userName) => commonGame(
-  userName,
-  RULE,
-  question,
-  answer,
-  textQuestion,
-);
+const getPrimeGameAnswers = () => commonGame(RULE, question, answer, textQuestion);
 
 export default getPrimeGameAnswers;

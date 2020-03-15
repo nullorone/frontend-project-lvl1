@@ -1,4 +1,5 @@
-import { commonGame, generateNumber } from '../utils/utils.js';
+import { generateNumberOfRange } from '../utils/utils.js';
+import commonGame from '../index.js';
 
 const RULE = 'Find the greatest common divisor of given numbers';
 
@@ -16,8 +17,8 @@ const getResult = (first, second) => {
 };
 
 const question = () => ({
-  first: generateNumber(),
-  second: generateNumber(),
+  first: generateNumberOfRange(),
+  second: generateNumberOfRange(),
 });
 
 const answer = (gameQuestion) => getResult(
@@ -27,6 +28,6 @@ const answer = (gameQuestion) => getResult(
 
 const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.second}`;
 
-const getGcdGameAnswers = (userName) => commonGame(userName, RULE, question, answer, textQuestion);
+const getGcdGameAnswers = () => commonGame(RULE, question, answer, textQuestion);
 
 export default getGcdGameAnswers;

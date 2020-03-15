@@ -1,4 +1,5 @@
-import { generateNumber, getRandomIndexToLimit, commonGame } from '../utils/utils.js';
+import commonGame from '../index.js';
+import { generateNumberOfRange, getRandomIndexToLimit } from '../utils/utils.js';
 
 const RULE = 'What number is missing in the progression?';
 const PROGRESSION_ITERATOR = 2;
@@ -6,7 +7,7 @@ const PROGRESSION_LENGTH = 10;
 const REPLACE_SYMBOL = '..';
 
 const getProgression = () => {
-  const startNumber = generateNumber();
+  const startNumber = generateNumberOfRange();
   const progression = [startNumber];
   const replaceIndex = getRandomIndexToLimit(PROGRESSION_LENGTH);
 
@@ -38,12 +39,6 @@ const answer = (gameQuestion) => getReplacedValue(gameQuestion);
 
 const textQuestion = (gameQuestion) => gameQuestion.join(' ');
 
-const getProgressionGameAnswers = (userName) => commonGame(
-  userName,
-  RULE,
-  question,
-  answer,
-  textQuestion,
-);
+const getProgressionGameAnswers = () => commonGame(RULE, question, answer, textQuestion);
 
 export default getProgressionGameAnswers;
