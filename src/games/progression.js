@@ -40,10 +40,6 @@ const answer = (gameQuestion) => getReplacedValue(gameQuestion);
 
 const textQuestion = (gameQuestion) => gameQuestion.join(' ');
 
-console.log('Welcome to the Brain Games!\n');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}`);
-
-const getProgressionGameAnswers = () => commonGame(name, RULE, question, answer, textQuestion);
+const getProgressionGameAnswers = () => commonGame(RULE, question, answer, textQuestion);
 
 export default getProgressionGameAnswers;

@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { generateNumber } from '../utils/utils.js';
 import commonGame from '../index.js';
 
@@ -13,10 +12,6 @@ const answer = (gameQuestion) => (checkEven(gameQuestion) ? 'yes' : 'no');
 
 const textQuestion = (gameQuestion) => gameQuestion.toString();
 
-console.log('Welcome to the Brain Games!\n');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}`);
-
-const getEvenGameAnswers = () => commonGame(name, RULE, question, answer, textQuestion);
+const getEvenGameAnswers = () => commonGame(RULE, question, answer, textQuestion);
 
 export default getEvenGameAnswers;

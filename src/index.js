@@ -2,10 +2,13 @@ import readlineSync from 'readline-sync';
 
 const AMOUNT_CORRECT_ANSWER = 3;
 
-const commonGame = (userName, rule, question, answer, textQuestion) => {
-  let countCorrectAnswer = 0;
-
+const commonGame = (rule, question, answer, textQuestion) => {
+  console.log('Welcome to the Brain Games!\n');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}`);
   console.log(rule);
+
+  let countCorrectAnswer = 0;
 
   while (countCorrectAnswer < AMOUNT_CORRECT_ANSWER) {
     const gameQuestion = question();
@@ -20,12 +23,12 @@ const commonGame = (userName, rule, question, answer, textQuestion) => {
       console.log('Correct!');
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${gameAnswer}".`);
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default commonGame;
