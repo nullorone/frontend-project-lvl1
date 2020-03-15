@@ -1,6 +1,5 @@
-import readlineSync from 'readline-sync';
 import commonGame from '../index.js';
-import { generateNumber, getRandomIndexToLimit } from '../utils/utils.js';
+import { generateNumberOfRange, getRandomIndexToLimit } from '../utils/utils.js';
 
 const RULE = 'What number is missing in the progression?';
 const PROGRESSION_ITERATOR = 2;
@@ -8,7 +7,7 @@ const PROGRESSION_LENGTH = 10;
 const REPLACE_SYMBOL = '..';
 
 const getProgression = () => {
-  const startNumber = generateNumber();
+  const startNumber = generateNumberOfRange();
   const progression = [startNumber];
   const replaceIndex = getRandomIndexToLimit(PROGRESSION_LENGTH);
 

@@ -1,6 +1,6 @@
 import {
   getRandomIndexToLimit,
-  generateNumber,
+  generateNumberOfRange,
 } from '../utils/utils.js';
 import commonGame from '../index.js';
 
@@ -27,8 +27,8 @@ const getMathResult = (first, second, operator) => {
 };
 
 const question = () => ({
-  first: generateNumber(),
-  second: generateNumber(),
+  first: generateNumberOfRange(),
+  second: generateNumberOfRange(),
   operator: getRandomMathOperator(MATH_OPERATORS),
 });
 

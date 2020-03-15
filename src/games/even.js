@@ -1,4 +1,4 @@
-import { generateNumber } from '../utils/utils.js';
+import { generateNumberOfRange } from '../utils/utils.js';
 import commonGame from '../index.js';
 
 const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -6,7 +6,7 @@ const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 // Return true if number even
 const checkEven = (number) => number % 2 === 0;
 
-const question = () => generateNumber();
+const question = () => generateNumberOfRange();
 
 const answer = (gameQuestion) => (checkEven(gameQuestion) ? 'yes' : 'no');
 
