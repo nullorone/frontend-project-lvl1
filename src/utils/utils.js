@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import { Text, AMOUNT_CORRECT_ANSWER } from './constants.js';
+
+const AMOUNT_CORRECT_ANSWER = 3;
 
 const getRandomIndexToLimit = (limit) => Math.floor(Math.random() * limit);
 
@@ -22,20 +23,20 @@ const commonGame = (userName, rule, question, answer, textQuestion) => {
     const gameAnswer = answer(gameQuestion);
     const gameTextQuestion = textQuestion(gameQuestion);
 
-    console.log(Text.QUESTION(gameTextQuestion));
-    const userAnswer = readlineSync.question(Text.USER_ANSWER);
+    console.log(`Question: ${gameTextQuestion}`);
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer.toString() === gameAnswer.toString()) {
       countCorrectAnswer += 1;
-      console.log(Text.CORRECT);
+      console.log('Correct!');
     } else {
-      console.log(Text.WRONG(userAnswer, gameAnswer));
-      console.log(Text.TRY_AGAIN(userName));
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${gameAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
 
-  console.log(Text.CONGRATULATION(userName));
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export {
