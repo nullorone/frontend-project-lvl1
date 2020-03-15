@@ -1,8 +1,9 @@
+import readlineSync from 'readline-sync';
 import {
   getRandomIndexToLimit,
   generateNumber,
-  commonGame,
 } from '../utils/utils.js';
+import commonGame from '../index.js';
 
 const MATH_OPERATORS = ['+', '-', '*'];
 const RULE = 'What is the result of the expression?';
@@ -40,6 +41,10 @@ const answer = (gameQuestion) => getMathResult(
 
 const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.operator} ${gameQuestion.second}`;
 
-const getCalcGameAnswers = (userName) => commonGame(userName, RULE, question, answer, textQuestion);
+console.log('Welcome to the Brain Games!\n');
+const name = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${name}`);
+
+const getCalcGameAnswers = () => commonGame(name, RULE, question, answer, textQuestion);
 
 export default getCalcGameAnswers;

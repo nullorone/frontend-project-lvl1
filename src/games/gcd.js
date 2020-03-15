@@ -1,4 +1,6 @@
-import { commonGame, generateNumber } from '../utils/utils.js';
+import readlineSync from 'readline-sync';
+import { generateNumber } from '../utils/utils.js';
+import commonGame from '../index.js';
 
 const RULE = 'Find the greatest common divisor of given numbers';
 
@@ -27,6 +29,10 @@ const answer = (gameQuestion) => getResult(
 
 const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.second}`;
 
-const getGcdGameAnswers = (userName) => commonGame(userName, RULE, question, answer, textQuestion);
+console.log('Welcome to the Brain Games!\n');
+const name = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${name}`);
+
+const getGcdGameAnswers = () => commonGame(name, RULE, question, answer, textQuestion);
 
 export default getGcdGameAnswers;

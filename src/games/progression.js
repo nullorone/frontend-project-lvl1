@@ -1,4 +1,6 @@
-import { generateNumber, getRandomIndexToLimit, commonGame } from '../utils/utils.js';
+import readlineSync from 'readline-sync';
+import commonGame from '../index.js';
+import { generateNumber, getRandomIndexToLimit } from '../utils/utils.js';
 
 const RULE = 'What number is missing in the progression?';
 const PROGRESSION_ITERATOR = 2;
@@ -38,12 +40,10 @@ const answer = (gameQuestion) => getReplacedValue(gameQuestion);
 
 const textQuestion = (gameQuestion) => gameQuestion.join(' ');
 
-const getProgressionGameAnswers = (userName) => commonGame(
-  userName,
-  RULE,
-  question,
-  answer,
-  textQuestion,
-);
+console.log('Welcome to the Brain Games!\n');
+const name = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${name}`);
+
+const getProgressionGameAnswers = () => commonGame(name, RULE, question, answer, textQuestion);
 
 export default getProgressionGameAnswers;
