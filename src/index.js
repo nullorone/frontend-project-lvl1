@@ -18,14 +18,14 @@ const commonGame = (rule, question, answer, textQuestion) => {
     console.log(`Question: ${gameTextQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer.toString() === gameAnswer.toString()) {
-      countCorrectAnswer += 1;
-      console.log('Correct!');
-    } else {
+    if (userAnswer.toString() !== gameAnswer.toString()) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${gameAnswer}".`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
+
+    countCorrectAnswer += 1;
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${name}!`);
