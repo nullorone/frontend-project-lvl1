@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const AMOUNT_CORRECT_ANSWER = 3;
 
 const commonGame = (rule, question, answer, textQuestion) => {
-  console.log('Welcome to the Brain Games!\n');
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
   console.log(rule);
