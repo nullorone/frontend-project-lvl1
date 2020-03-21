@@ -1,14 +1,11 @@
-import {
-  getRandomIndexToLimit,
-  generateNumberOfRange,
-} from '../utils/utils.js';
+import generateNumberOfRange from '../utils/utils.js';
 import commonGame from '../index.js';
 
 const MATH_OPERATORS = ['+', '-', '*'];
 const RULE = 'What is the result of the expression?';
 
 const getRandomMathOperator = (operators) => {
-  const indexOperator = getRandomIndexToLimit(operators.length);
+  const indexOperator = generateNumberOfRange(0, operators.length - 1);
 
   return operators[indexOperator];
 };

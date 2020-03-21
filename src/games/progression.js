@@ -1,5 +1,5 @@
 import commonGame from '../index.js';
-import { generateNumberOfRange, getRandomIndexToLimit } from '../utils/utils.js';
+import generateNumberOfRange from '../utils/utils.js';
 
 const RULE = 'What number is missing in the progression?';
 const PROGRESSION_ITERATOR = 2;
@@ -9,7 +9,7 @@ const REPLACE_SYMBOL = '..';
 const getProgression = () => {
   const startNumber = generateNumberOfRange();
   const progression = [startNumber];
-  const replaceIndex = getRandomIndexToLimit(PROGRESSION_LENGTH);
+  const replaceIndex = generateNumberOfRange(0, PROGRESSION_LENGTH);
 
   for (let i = 1; i < PROGRESSION_LENGTH; i += 1) {
     const prevValue = progression[i - 1];

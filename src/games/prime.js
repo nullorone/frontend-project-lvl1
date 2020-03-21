@@ -1,5 +1,5 @@
 import commonGame from '../index.js';
-import { generateNumberOfRange } from '../utils/utils.js';
+import generateNumberOfRange from '../utils/utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
