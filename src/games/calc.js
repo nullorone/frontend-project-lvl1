@@ -1,8 +1,8 @@
 import generateNumberOfRange from '../utils/utils.js';
 import commonGame from '../index.js';
 
-const MATH_OPERATORS = ['+', '-', '*'];
-const RULE = 'What is the result of the expression?';
+const mathOperators = ['+', '-', '*'];
+const rule = 'What is the result of the expression?';
 
 const getRandomMathOperator = (operators) => {
   const indexOperator = generateNumberOfRange(0, operators.length - 1);
@@ -12,11 +12,11 @@ const getRandomMathOperator = (operators) => {
 
 const getMathResult = (first, second, operator) => {
   switch (operator) {
-    case (MATH_OPERATORS[0]):
+    case (mathOperators[0]):
       return first + second;
-    case (MATH_OPERATORS[1]):
+    case (mathOperators[1]):
       return first - second;
-    case (MATH_OPERATORS[2]):
+    case (mathOperators[2]):
       return first * second;
     default:
       throw new Error('Not correct operator');
@@ -26,7 +26,7 @@ const getMathResult = (first, second, operator) => {
 const question = () => ({
   first: generateNumberOfRange(),
   second: generateNumberOfRange(),
-  operator: getRandomMathOperator(MATH_OPERATORS),
+  operator: getRandomMathOperator(mathOperators),
 });
 
 const answer = (gameQuestion) => getMathResult(
@@ -37,6 +37,6 @@ const answer = (gameQuestion) => getMathResult(
 
 const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.operator} ${gameQuestion.second}`;
 
-const getCalcGameAnswers = () => commonGame(RULE, question, answer, textQuestion);
+const getCalcGameAnswers = () => commonGame(rule, question, answer, textQuestion);
 
 export default getCalcGameAnswers;
