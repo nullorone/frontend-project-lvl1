@@ -11,25 +11,21 @@
 * `make install` - для владельцев macOS/Linux
 * `npm install` - для Windows
 
+[![asciicast](https://asciinema.org/a/kgLbKZIkGRAlBFtH9Ap7pM3r2.svg)](https://asciinema.org/a/kgLbKZIkGRAlBFtH9Ap7pM3r2)
+
 ## Использование
 
-* `make start` - для владельцев macOS/Linux
-* `npx node bin/brain-games.js` - для Windows
+1. Введите `brain-calc`, чтобы сыграть в игру "Калькулятор"
+[![asciicast](https://asciinema.org/a/4VkWeVbAgbbNSUIzb5zn0Mygt.svg)](https://asciinema.org/a/4VkWeVbAgbbNSUIzb5zn0Mygt)
 
-1. Выберите игру в которую хотите сыграть или выберите 0 если передумали играть.
-[![asciicast](https://asciinema.org/a/quSwtcfjGe4SfhnPvlcR6GDeO.svg)](https://asciinema.org/a/quSwtcfjGe4SfhnPvlcR6GDeO)
+1. Введите `brain-even`, чтобы сыграть в игру на чётность
+[![asciicast](https://asciinema.org/a/5wD2Op3aNBuAyPhfgF7jOSJS3.svg)](https://asciinema.org/a/5wD2Op3aNBuAyPhfgF7jOSJS3)
 
-1. Пример игры в чётность
-[![asciicast](https://asciinema.org/a/HuhSEiOhex8CY1Zdh2mToUGXP.svg)](https://asciinema.org/a/HuhSEiOhex8CY1Zdh2mToUGXP)
+1. Введите `brain-gcd`, чтобы сыграть в игру "наибольший общий делитель (НОД)"
+[![asciicast](https://asciinema.org/a/SU6DkXZRX8docKKNvOSV8bgdz.svg)](https://asciinema.org/a/SU6DkXZRX8docKKNvOSV8bgdz)
 
-1. Пример игры в "Калькулятор"
-[![asciicast](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h.svg)](https://asciinema.org/a/pTjNR4sF5c8kUyxnCsH8Wr88h)
+1. Введите `brain-prime`, чтобы сыграть в игру "Простое ли число?"
+[![asciicast](https://asciinema.org/a/FGkHR5rNewHjEkS0Xd7WWAnZO.svg)](https://asciinema.org/a/FGkHR5rNewHjEkS0Xd7WWAnZO)
 
-1. Пример игры в "НОД"
-[![asciicast](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f.svg)](https://asciinema.org/a/0Rkwsna4d5KI72upPTfF5fN1f)
-
-1. Пример игры "Арифметическая прогрессия"
-[![asciicast](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ.svg)](https://asciinema.org/a/IzMytLtokb2k62b78wfgw1jxQ)
-
-1. Пример игры "Простое ли число?"
-[![asciicast](https://asciinema.org/a/Pq4Q3Re4zlxn0FpvkSBajYB5G.svg)](https://asciinema.org/a/Pq4Q3Re4zlxn0FpvkSBajYB5G)
+1. Введите `brain-progression`, чтобы сыграть в игру "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/wdRVGiKnh80vOfUx3L3wuZYIC.svg)](https://asciinema.org/a/wdRVGiKnh80vOfUx3L3wuZYIC)
