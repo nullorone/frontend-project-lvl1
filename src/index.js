@@ -8,9 +8,7 @@ const commonGame = (rule, question, answer, textQuestion) => {
   console.log(`Hello, ${name}`);
   console.log(rule);
 
-  let countCorrectAnswer = 0;
-
-  while (countCorrectAnswer < roundsCount) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const gameQuestion = question();
     const gameAnswer = answer(gameQuestion);
     const gameTextQuestion = textQuestion(gameQuestion);
@@ -24,7 +22,6 @@ const commonGame = (rule, question, answer, textQuestion) => {
       return;
     }
 
-    countCorrectAnswer += 1;
     console.log('Correct!');
   }
 
