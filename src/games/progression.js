@@ -5,9 +5,13 @@ const rule = 'What number is missing in the progression?';
 const progressionIterator = 2;
 const progressionLength = 10;
 const replaceSymbol = '..';
+const numberLimit = {
+  min: 0,
+  max: 100,
+};
 
 const getProgression = () => {
-  const startNumber = generateNumberOfRange();
+  const startNumber = generateNumberOfRange(numberLimit.min, numberLimit.max);
   const progression = [startNumber];
   const replaceIndex = generateNumberOfRange(0, progressionLength);
 

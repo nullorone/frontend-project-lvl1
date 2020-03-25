@@ -3,6 +3,16 @@ import commonGame from '../index.js';
 
 const mathOperators = ['+', '-', '*'];
 const rule = 'What is the result of the expression?';
+const numberLimit = {
+  first: {
+    min: 0,
+    max: 10,
+  },
+  second: {
+    min: 10,
+    max: 100,
+  },
+};
 
 const getRandomMathOperator = (operators) => {
   const indexOperator = generateNumberOfRange(0, operators.length - 1);
@@ -24,8 +34,8 @@ const getMathResult = (first, second, operator) => {
 };
 
 const question = () => ({
-  first: generateNumberOfRange(),
-  second: generateNumberOfRange(),
+  first: generateNumberOfRange(numberLimit.first.min, numberLimit.first.max),
+  second: generateNumberOfRange(numberLimit.second.min, numberLimit.second.max),
   operator: getRandomMathOperator(mathOperators),
 });
 

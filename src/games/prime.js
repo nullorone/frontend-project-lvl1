@@ -2,6 +2,10 @@ import commonGame from '../index.js';
 import generateNumberOfRange from '../utils/utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const numberLimit = {
+  min: 0,
+  max: 100,
+};
 
 const checkPrimeValue = (value) => {
   const limitIterator = Math.floor(Math.sqrt(value));
@@ -14,7 +18,7 @@ const checkPrimeValue = (value) => {
   return startIterator === limitIterator;
 };
 
-const question = () => generateNumberOfRange();
+const question = () => generateNumberOfRange(numberLimit.min, numberLimit.max);
 
 const answer = (gameQuestion) => (checkPrimeValue(gameQuestion) ? 'yes' : 'no');
 
