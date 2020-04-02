@@ -2,6 +2,16 @@ import generateNumberOfRange from '../utils/utils.js';
 import commonGame from '../index.js';
 
 const rule = 'Find the greatest common divisor of given numbers';
+const numberLimit = {
+  first: {
+    min: 1,
+    max: 10,
+  },
+  second: {
+    min: 10,
+    max: 100,
+  },
+};
 
 const getResult = (first, second) => {
   const lessDivisor = first > second ? second : first;
@@ -16,18 +26,22 @@ const getResult = (first, second) => {
   return commonDivisor;
 };
 
-const question = () => ({
-  first: generateNumberOfRange(),
-  second: generateNumberOfRange(),
-});
+const createGameInfo = () => {
+  const question = ({
+    first: generateNumberOfRange(numberLimit.first.min, numberLimit.first.max),
+    second: generateNumberOfRange(numberLimit.second.min, numberLimit.second.max),
+  });
 
-const answer = (gameQuestion) => getResult(
-  gameQuestion.first,
-  gameQuestion.second,
-);
+  const answer = getResult(
+    question.first,
+    question.second,
+  );
 
-const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.second}`;
+  const textQuestion = `${question.first} ${question.second}`;
 
-const getGcdGameAnswers = () => commonGame(rule, question, answer, textQuestion);
+  return [answer, textQuestion];
+};
+
+const getGcdGameAnswers = () => commonGame(rule, createGameInfo);
 
 export default getGcdGameAnswers;

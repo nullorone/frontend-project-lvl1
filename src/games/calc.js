@@ -3,6 +3,16 @@ import commonGame from '../index.js';
 
 const mathOperators = ['+', '-', '*'];
 const rule = 'What is the result of the expression?';
+const numberLimit = {
+  first: {
+    min: 1,
+    max: 10,
+  },
+  second: {
+    min: 10,
+    max: 100,
+  },
+};
 
 const getRandomMathOperator = (operators) => {
   const indexOperator = generateNumberOfRange(0, operators.length - 1);
@@ -23,20 +33,24 @@ const getMathResult = (first, second, operator) => {
   }
 };
 
-const question = () => ({
-  first: generateNumberOfRange(),
-  second: generateNumberOfRange(),
-  operator: getRandomMathOperator(mathOperators),
-});
+const createGameInfo = () => {
+  const question = ({
+    first: generateNumberOfRange(numberLimit.first.min, numberLimit.first.max),
+    second: generateNumberOfRange(numberLimit.second.min, numberLimit.second.max),
+    operator: getRandomMathOperator(mathOperators),
+  });
 
-const answer = (gameQuestion) => getMathResult(
-  gameQuestion.first,
-  gameQuestion.second,
-  gameQuestion.operator,
-);
+  const answer = getMathResult(
+    question.first,
+    question.second,
+    question.operator,
+  );
 
-const textQuestion = (gameQuestion) => `${gameQuestion.first} ${gameQuestion.operator} ${gameQuestion.second}`;
+  const textQuestion = `${question.first} ${question.operator} ${question.second}`;
 
-const getCalcGameAnswers = () => commonGame(rule, question, answer, textQuestion);
+  return [answer, textQuestion];
+};
+
+const getCalcGameAnswers = () => commonGame(rule, createGameInfo);
 
 export default getCalcGameAnswers;
