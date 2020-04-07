@@ -1,6 +1,6 @@
 {
   "name": "brain-games-project",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Lesson project from Hexlet.io",
   "main": "src/index.js",
   "type": "module",
@@ -8,7 +8,6 @@
     "test": "npx eslint ."
   },
   "bin": {
-    "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",

@@ -1,18 +1,8 @@
-import generateNumberOfRange from '../utils/utils.js';
+import generateNumberOfRange from '../utils.js';
 import commonGame from '../index.js';
 
 const mathOperators = ['+', '-', '*'];
 const rule = 'What is the result of the expression?';
-const numberLimit = {
-  first: {
-    min: 1,
-    max: 10,
-  },
-  second: {
-    min: 10,
-    max: 100,
-  },
-};
 
 const getRandomMathOperator = (operators) => {
   const indexOperator = generateNumberOfRange(0, operators.length - 1);
@@ -22,11 +12,11 @@ const getRandomMathOperator = (operators) => {
 
 const getMathResult = (first, second, operator) => {
   switch (operator) {
-    case (mathOperators[0]):
+    case ('+'):
       return first + second;
-    case (mathOperators[1]):
+    case ('-'):
       return first - second;
-    case (mathOperators[2]):
+    case ('*'):
       return first * second;
     default:
       throw new Error('Not correct operator');
@@ -35,8 +25,8 @@ const getMathResult = (first, second, operator) => {
 
 const createGameInfo = () => {
   const question = ({
-    first: generateNumberOfRange(numberLimit.first.min, numberLimit.first.max),
-    second: generateNumberOfRange(numberLimit.second.min, numberLimit.second.max),
+    first: generateNumberOfRange(1, 10),
+    second: generateNumberOfRange(10, 100),
     operator: getRandomMathOperator(mathOperators),
   });
 
@@ -44,7 +34,7 @@ const createGameInfo = () => {
     question.first,
     question.second,
     question.operator,
-  );
+  ).toString();
 
   const textQuestion = `${question.first} ${question.operator} ${question.second}`;
 

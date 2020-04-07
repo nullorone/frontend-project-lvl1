@@ -14,7 +14,7 @@ const commonGame = (rule, game) => {
     console.log(`Question: ${textQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer.toString() !== answer.toString()) {
+    if (userAnswer !== answer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
       console.log(`Let's try again, ${name}!`);
       return;

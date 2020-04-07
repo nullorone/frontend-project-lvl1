@@ -1,29 +1,26 @@
 import commonGame from '../index.js';
-import generateNumberOfRange from '../utils/utils.js';
+import generateNumberOfRange from '../utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const numberLimit = {
-  min: 1,
-  max: 100,
-};
 
 const isPrimeValue = (value) => {
-  const limitIterator = Math.ceil(Math.sqrt(value));
-  let startIterator = 2;
+  const limitIterator = Math.floor(Math.sqrt(value));
 
-  if (limitIterator === startIterator) {
+  if (value <= 1) {
     return false;
   }
 
-  while (startIterator < limitIterator && value % startIterator !== 0) {
-    startIterator += 1;
+  for (let i = 2; i <= limitIterator; i += 1) {
+    if (value % i === 0) {
+      return false;
+    }
   }
 
-  return startIterator === limitIterator;
+  return true;
 };
 
 const createGameInfo = () => {
-  const question = generateNumberOfRange(numberLimit.min, numberLimit.max);
+  const question = generateNumberOfRange(1, 100);
 
   const answer = isPrimeValue(question) ? 'yes' : 'no';
 
