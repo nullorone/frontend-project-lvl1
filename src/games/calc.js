@@ -12,11 +12,11 @@ const getRandomMathOperator = (operators) => {
 
 const getMathResult = (first, second, operator) => {
   switch (operator) {
-    case (mathOperators[0]):
+    case ('+'):
       return first + second;
-    case (mathOperators[1]):
+    case ('-'):
       return first - second;
-    case (mathOperators[2]):
+    case ('*'):
       return first * second;
     default:
       throw new Error('Not correct operator');
