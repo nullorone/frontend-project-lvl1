@@ -36,7 +36,7 @@ const getReplacedValue = (progression) => {
 const createGameInfo = () => {
   const question = getProgression();
 
-  const answer = getReplacedValue(question);
+  const answer = getReplacedValue(question).toString();
 
   const textQuestion = question.join(' ');
 

@@ -25,7 +25,7 @@ const createGameInfo = () => {
   const answer = getResult(
     question.first,
     question.second,
-  );
+  ).toString();
 
   const textQuestion = `${question.first} ${question.second}`;
 

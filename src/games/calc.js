@@ -34,7 +34,7 @@ const createGameInfo = () => {
     question.first,
     question.second,
     question.operator,
-  );
+  ).toString();
 
   const textQuestion = `${question.first} ${question.operator} ${question.second}`;
 
