@@ -2,17 +2,13 @@ import generateNumberOfRange from '../utils.js';
 import commonGame from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-const numberLimit = {
-  min: 1,
-  max: 100,
-};
 
 // Return true if number even
 const checkEven = (number) => number % 2 === 0;
 
 
 const createGameInfo = () => {
-  const question = generateNumberOfRange(numberLimit.min, numberLimit.max);
+  const question = generateNumberOfRange(1, 100);
 
   const answer = checkEven(question) ? 'yes' : 'no';
 
