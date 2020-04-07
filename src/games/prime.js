@@ -4,18 +4,19 @@ import generateNumberOfRange from '../utils.js';
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrimeValue = (value) => {
-  const limitIterator = Math.ceil(Math.sqrt(value));
-  let startIterator = 2;
+  const limitIterator = Math.floor(Math.sqrt(value));
 
-  if (limitIterator === startIterator) {
+  if (value <= 1) {
     return false;
   }
 
-  while (startIterator < limitIterator && value % startIterator !== 0) {
-    startIterator += 1;
+  for (let i = 2; i <= limitIterator; i += 1) {
+    if (value % i === 0) {
+      return false;
+    }
   }
 
-  return startIterator === limitIterator;
+  return true;
 };
 
 const createGameInfo = () => {
