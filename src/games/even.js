@@ -4,13 +4,13 @@ import commonGame from '../index.js';
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Return true if number even
-const checkEven = (number) => number % 2 === 0;
+const isEven = (number) => number % 2 === 0;
 
 
 const createGameInfo = () => {
   const question = generateNumberOfRange(1, 100);
 
-  const answer = checkEven(question) ? 'yes' : 'no';
+  const answer = isEven(question) ? 'yes' : 'no';
 
   const textQuestion = question.toString();
 
