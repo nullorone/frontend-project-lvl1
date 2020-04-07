@@ -3,7 +3,11 @@ import commonGame from '../index.js';
 
 const rule = 'Find the greatest common divisor of given numbers';
 
-const getResult = (first, second) => {
+const getGcd = (first, second) => {
+  if (first === 0) {
+    throw new Error('Wrong first argument. Must be greatest 0.');
+  }
+
   const lessDivisor = first > second ? second : first;
   let commonDivisor = lessDivisor;
 
@@ -17,12 +21,12 @@ const getResult = (first, second) => {
 };
 
 const createGameInfo = () => {
-  const question = ({
+  const question = {
     first: generateNumberOfRange(1, 10),
     second: generateNumberOfRange(10, 100),
-  });
+  };
 
-  const answer = getResult(
+  const answer = getGcd(
     question.first,
     question.second,
   ).toString();
