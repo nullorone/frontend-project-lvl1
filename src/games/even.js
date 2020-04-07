@@ -1,4 +1,4 @@
-import generateNumberOfRange from '../utils/utils.js';
+import generateNumberOfRange from '../utils.js';
 import commonGame from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';

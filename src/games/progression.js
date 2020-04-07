@@ -1,5 +1,5 @@
 import commonGame from '../index.js';
-import generateNumberOfRange from '../utils/utils.js';
+import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
 const progressionIterator = 2;
