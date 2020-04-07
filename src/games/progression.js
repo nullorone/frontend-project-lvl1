@@ -2,25 +2,20 @@ import commonGame from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
-const progressionIterator = 2;
-const progressionLength = 10;
 const replaceSymbol = '..';
 
-const getProgression = () => {
-  const startNumber = generateNumberOfRange(1, 100);
-  const progression = [];
-  const replaceIndex = generateNumberOfRange(0, progressionLength);
-
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(startNumber + progressionIterator * i);
-  }
+const getProgression = (startNumber, step, lengthProgression) => {
+  const replaceIndex = generateNumberOfRange(0, lengthProgression);
+  const progression = new Array(lengthProgression)
+    .fill(0)
+    .map((value, idx) => startNumber + step * idx);
 
   progression[replaceIndex] = replaceSymbol;
 
   return progression;
 };
 
-const getReplacedValue = (progression) => {
+const getReplacedValue = (progression, step) => {
   const replacedIndex = progression.indexOf(replaceSymbol);
 
   if (replacedIndex === -1) {
@@ -28,15 +23,19 @@ const getReplacedValue = (progression) => {
   }
 
   return replacedIndex === 0
-    ? progression[replacedIndex + 1] - progressionIterator
-    : progression[replacedIndex - 1] + progressionIterator;
+    ? progression[replacedIndex + 1] - step
+    : progression[replacedIndex - 1] + step;
 };
 
 
 const createGameInfo = () => {
-  const question = getProgression();
+  const startNumber = generateNumberOfRange(1, 100);
+  const progressionStep = 2;
+  const progressionLength = 10;
 
-  const answer = getReplacedValue(question).toString();
+  const question = getProgression(startNumber, progressionStep, progressionLength);
+
+  const answer = getReplacedValue(question, progressionStep).toString();
 
   const textQuestion = question.join(' ');
 
