@@ -24,17 +24,17 @@ const getMathResult = (first, second, operator) => {
 };
 
 const createGameInfo = () => {
-  const firstNumber = generateNumberOfRange(1, 10);
-  const secondNumber = generateNumberOfRange(10, 100);
+  const first = generateNumberOfRange(1, 10);
+  const second = generateNumberOfRange(10, 100);
   const mathOperator = getRandomMathOperator(mathOperators);
 
   const answer = getMathResult(
-    firstNumber,
-    secondNumber,
+    first,
+    second,
     mathOperator,
   ).toString();
 
-  const question = `${firstNumber} ${mathOperator} ${secondNumber}`;
+  const question = `${first} ${mathOperator} ${second}`;
 
   return [answer, question];
 };
