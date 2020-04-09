@@ -36,6 +36,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getGcdGameAnswers = () => playGame(rule, createGameInfo);
+const beginGcdGame = () => playGame(rule, createGameInfo);
 
-export default getGcdGameAnswers;
+export default beginGcdGame;

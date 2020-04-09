@@ -39,6 +39,6 @@ const createGameInfo = () => {
   return [answer, question];
 };
 
-const getCalcGameAnswers = () => playGame(rule, createGameInfo);
+const beginCalcGame = () => playGame(rule, createGameInfo);
 
-export default getCalcGameAnswers;
+export default beginCalcGame;

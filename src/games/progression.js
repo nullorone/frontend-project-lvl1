@@ -42,6 +42,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getProgressionGameAnswers = () => playGame(rule, createGameInfo);
+const beginProgressionGame = () => playGame(rule, createGameInfo);
 
-export default getProgressionGameAnswers;
+export default beginProgressionGame;

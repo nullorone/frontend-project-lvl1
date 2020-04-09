@@ -15,6 +15,6 @@ const createGameInfo = () => {
   return [answer, question];
 };
 
-const getEvenGameAnswers = () => playGame(rule, createGameInfo);
+const beginEvenGame = () => playGame(rule, createGameInfo);
 
-export default getEvenGameAnswers;
+export default beginEvenGame;
