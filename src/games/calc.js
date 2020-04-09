@@ -24,21 +24,19 @@ const getMathResult = (first, second, operator) => {
 };
 
 const createGameInfo = () => {
-  const question = ({
-    first: generateNumberOfRange(1, 10),
-    second: generateNumberOfRange(10, 100),
-    operator: getRandomMathOperator(mathOperators),
-  });
+  const firstNumber = generateNumberOfRange(1, 10);
+  const secondNumber = generateNumberOfRange(10, 100);
+  const mathOperator = getRandomMathOperator(mathOperators);
 
   const answer = getMathResult(
-    question.first,
-    question.second,
-    question.operator,
+    firstNumber,
+    secondNumber,
+    mathOperator,
   ).toString();
 
-  const textQuestion = `${question.first} ${question.operator} ${question.second}`;
+  const question = `${firstNumber} ${mathOperator} ${secondNumber}`;
 
-  return [answer, textQuestion];
+  return [answer, question];
 };
 
 const getCalcGameAnswers = () => playGame(rule, createGameInfo);
