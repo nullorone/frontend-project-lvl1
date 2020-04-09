@@ -1,5 +1,5 @@
 import generateNumberOfRange from '../utils.js';
-import commonGame from '../index.js';
+import playGame from '../index.js';
 
 const rule = 'Find the greatest common divisor of given numbers';
 
@@ -36,6 +36,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getGcdGameAnswers = () => commonGame(rule, createGameInfo);
+const getGcdGameAnswers = () => playGame(rule, createGameInfo);
 
 export default getGcdGameAnswers;

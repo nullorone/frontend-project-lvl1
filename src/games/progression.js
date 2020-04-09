@@ -1,4 +1,4 @@
-import commonGame from '../index.js';
+import playGame from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
@@ -42,6 +42,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getProgressionGameAnswers = () => commonGame(rule, createGameInfo);
+const getProgressionGameAnswers = () => playGame(rule, createGameInfo);
 
 export default getProgressionGameAnswers;

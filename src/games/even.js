@@ -1,5 +1,5 @@
 import generateNumberOfRange from '../utils.js';
-import commonGame from '../index.js';
+import playGame from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -17,6 +17,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getEvenGameAnswers = () => commonGame(rule, createGameInfo);
+const getEvenGameAnswers = () => playGame(rule, createGameInfo);
 
 export default getEvenGameAnswers;

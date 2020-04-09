@@ -1,5 +1,5 @@
 import generateNumberOfRange from '../utils.js';
-import commonGame from '../index.js';
+import playGame from '../index.js';
 
 const mathOperators = ['+', '-', '*'];
 const rule = 'What is the result of the expression?';
@@ -41,6 +41,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getCalcGameAnswers = () => commonGame(rule, createGameInfo);
+const getCalcGameAnswers = () => playGame(rule, createGameInfo);
 
 export default getCalcGameAnswers;
