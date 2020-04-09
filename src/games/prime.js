@@ -1,9 +1,9 @@
-import commonGame from '../index.js';
+import playGame from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrimeValue = (value) => {
+const isPrime = (value) => {
   const limitIterator = Math.floor(Math.sqrt(value));
 
   if (value <= 1) {
@@ -22,11 +22,11 @@ const isPrimeValue = (value) => {
 const createGameInfo = () => {
   const question = generateNumberOfRange(1, 100);
 
-  const answer = isPrimeValue(question) ? 'yes' : 'no';
+  const answer = isPrime(question) ? 'yes' : 'no';
 
   return [answer, question];
 };
 
-const getPrimeGameAnswers = () => commonGame(rule, createGameInfo);
+const beginPrimeGame = () => playGame(rule, createGameInfo);
 
-export default getPrimeGameAnswers;
+export default beginPrimeGame;

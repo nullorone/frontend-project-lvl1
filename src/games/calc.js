@@ -1,5 +1,5 @@
 import generateNumberOfRange from '../utils.js';
-import commonGame from '../index.js';
+import playGame from '../index.js';
 
 const mathOperators = ['+', '-', '*'];
 const rule = 'What is the result of the expression?';
@@ -24,23 +24,21 @@ const getMathResult = (first, second, operator) => {
 };
 
 const createGameInfo = () => {
-  const question = ({
-    first: generateNumberOfRange(1, 10),
-    second: generateNumberOfRange(10, 100),
-    operator: getRandomMathOperator(mathOperators),
-  });
+  const first = generateNumberOfRange(1, 10);
+  const second = generateNumberOfRange(10, 100);
+  const mathOperator = getRandomMathOperator(mathOperators);
 
   const answer = getMathResult(
-    question.first,
-    question.second,
-    question.operator,
+    first,
+    second,
+    mathOperator,
   ).toString();
 
-  const textQuestion = `${question.first} ${question.operator} ${question.second}`;
+  const question = `${first} ${mathOperator} ${second}`;
 
-  return [answer, textQuestion];
+  return [answer, question];
 };
 
-const getCalcGameAnswers = () => commonGame(rule, createGameInfo);
+const beginCalcGame = () => playGame(rule, createGameInfo);
 
-export default getCalcGameAnswers;
+export default beginCalcGame;

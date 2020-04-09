@@ -1,14 +1,14 @@
-import commonGame from '../index.js';
+import playGame from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
 const replaceSymbol = '..';
 
-const getProgression = (startNumber, step, lengthProgression) => {
+const getProgression = (start, step, lengthProgression) => {
   const replaceIndex = generateNumberOfRange(0, lengthProgression);
   const progression = new Array(lengthProgression)
     .fill(0)
-    .map((value, idx) => startNumber + step * idx);
+    .map((value, idx) => start + step * idx);
 
   progression[replaceIndex] = replaceSymbol;
 
@@ -29,11 +29,11 @@ const getReplacedValue = (progression, step) => {
 
 
 const createGameInfo = () => {
-  const startNumber = generateNumberOfRange(1, 100);
+  const start = generateNumberOfRange(1, 100);
   const progressionStep = 2;
   const progressionLength = 10;
 
-  const question = getProgression(startNumber, progressionStep, progressionLength);
+  const question = getProgression(start, progressionStep, progressionLength);
 
   const answer = getReplacedValue(question, progressionStep).toString();
 
@@ -42,6 +42,6 @@ const createGameInfo = () => {
   return [answer, textQuestion];
 };
 
-const getProgressionGameAnswers = () => commonGame(rule, createGameInfo);
+const beginProgressionGame = () => playGame(rule, createGameInfo);
 
-export default getProgressionGameAnswers;
+export default beginProgressionGame;
