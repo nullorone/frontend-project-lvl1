@@ -9,9 +9,9 @@ const playGame = (rule, game) => {
   console.log(rule);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const [answer, textQuestion] = game();
+    const [answer, question] = game();
 
-    console.log(`Question: ${textQuestion}`);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== answer) {
