@@ -12,9 +12,7 @@ const createGameInfo = () => {
 
   const answer = isEven(question) ? 'yes' : 'no';
 
-  const textQuestion = question.toString();
-
-  return [answer, textQuestion];
+  return [answer, question];
 };
 
 const getEvenGameAnswers = () => playGame(rule, createGameInfo);
