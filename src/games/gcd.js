@@ -4,36 +4,36 @@ import playGame from '../index.js';
 const rule = 'Find the greatest common divisor of given numbers';
 
 const getGcd = (first, second) => {
-  if (first === 0) {
-    throw new Error('Wrong first argument. Must be greatest 0.');
+  if (first === 0 || second === 0) {
+    throw new Error('Wrong argument. Must be greatest 0.');
   }
 
-  const lessDivisor = first > second ? second : first;
-  let commonDivisor = lessDivisor;
+  let firstNumber = first;
+  let secondNumber = second;
 
-  for (let i = 2; i < lessDivisor; i += 1) {
-    if (first % i === 0 && second % i === 0) {
-      commonDivisor = i;
+  while (firstNumber !== 0 && secondNumber !== 0) {
+    if (firstNumber > secondNumber) {
+      firstNumber %= secondNumber;
+    } else {
+      secondNumber %= firstNumber;
     }
   }
 
-  return commonDivisor;
+  return firstNumber + secondNumber;
 };
 
 const createGameInfo = () => {
-  const question = {
-    first: generateNumberOfRange(1, 10),
-    second: generateNumberOfRange(10, 100),
-  };
+  const first = generateNumberOfRange(1, 10);
+  const second = generateNumberOfRange(10, 100);
 
   const answer = getGcd(
-    question.first,
-    question.second,
+    first,
+    second,
   ).toString();
 
-  const textQuestion = `${question.first} ${question.second}`;
+  const question = `${first} ${second}`;
 
-  return [answer, textQuestion];
+  return [answer, question];
 };
 
 const beginGcdGame = () => playGame(rule, createGameInfo);
