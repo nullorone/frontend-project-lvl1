@@ -1,4 +1,4 @@
-import playGame from '../index.js';
+import getGameData from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -19,7 +19,7 @@ const isPrime = (value) => {
   return true;
 };
 
-const createGameInfo = () => {
+const getQuestionAnswer = () => {
   const question = generateNumberOfRange(1, 100);
 
   const answer = isPrime(question) ? 'yes' : 'no';
@@ -27,6 +27,6 @@ const createGameInfo = () => {
   return [answer, question];
 };
 
-const beginPrimeGame = () => playGame(rule, createGameInfo);
+const beginPrimeGame = () => getGameData(rule, getQuestionAnswer);
 
 export default beginPrimeGame;
