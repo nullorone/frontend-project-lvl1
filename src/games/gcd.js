@@ -4,8 +4,8 @@ import getGameData from '../index.js';
 const rule = 'Find the greatest common divisor of given numbers';
 
 const getGcd = (first, second) => {
-  if (first === 0 || second === 0) {
-    throw new Error('Wrong argument. Must be greatest 0.');
+  if (first <= 0 || second <= 0) {
+    return 0;
   }
 
   let firstNumber = first;
