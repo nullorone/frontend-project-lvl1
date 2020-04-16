@@ -27,5 +27,3 @@ jobs:
     - run: |
         make install
         make lint
-      env:
-        CI: true
