@@ -10,7 +10,7 @@ const getRandomMathOperator = (operators) => {
   return operators[indexOperator];
 };
 
-const getMathResult = (first, second, operator) => {
+const calculate = (first, second, operator) => {
   switch (operator) {
     case ('+'):
       return first + second;
@@ -28,7 +28,7 @@ const getQuestionAnswer = () => {
   const second = generateNumberOfRange(10, 100);
   const mathOperator = getRandomMathOperator(mathOperators);
 
-  const answer = getMathResult(
+  const answer = calculate(
     first,
     second,
     mathOperator,
