@@ -4,9 +4,6 @@
   "description": "Lesson project from Hexlet.io",
   "main": "src/index.js",
   "type": "module",
-  "scripts": {
-    "test": "npx eslint ."
-  },
   "bin": {
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
