@@ -2,7 +2,7 @@ import getGameData from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
-const symbol = '..';
+const charForReplacementProgressionItem = '..';
 
 const getProgression = (start, step, progressionLength) => {
   const progression = [];
@@ -21,7 +21,7 @@ const getQuestionAnswer = () => {
   const index = generateNumberOfRange(0, 9);
   const progression = getProgression(start, step, length);
 
-  const answer = progression.splice(index, 1, symbol);
+  const answer = progression.splice(index, 1, charForReplacementProgressionItem);
 
   const question = progression.join(' ');
 
