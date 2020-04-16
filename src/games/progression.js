@@ -4,10 +4,10 @@ import generateNumberOfRange from '../utils.js';
 const rule = 'What number is missing in the progression?';
 const symbol = '..';
 
-const getProgression = (start, step, lengthProgression) => {
+const getProgression = (start, step, progressionLength) => {
   const progression = [];
 
-  for (let i = 0; i < lengthProgression; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     progression[i] = start + step * i;
   }
 
