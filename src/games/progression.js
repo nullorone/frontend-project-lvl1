@@ -1,4 +1,4 @@
-import getGameData from '../index.js';
+import engine from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
@@ -28,6 +28,6 @@ const getQuestionAnswer = () => {
   return [answer.toString(), question];
 };
 
-const beginProgressionGame = () => getGameData(rule, getQuestionAnswer);
+const runProgressionGame = () => engine(rule, getQuestionAnswer);
 
-export default beginProgressionGame;
+export default runProgressionGame;

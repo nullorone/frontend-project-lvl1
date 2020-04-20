@@ -1,5 +1,5 @@
 import generateNumberOfRange from '../utils.js';
-import getGameData from '../index.js';
+import engine from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -14,6 +14,6 @@ const getQuestionAnswer = () => {
   return [answer, question];
 };
 
-const beginEvenGame = () => getGameData(rule, getQuestionAnswer);
+const runEvenGame = () => engine(rule, getQuestionAnswer);
 
-export default beginEvenGame;
+export default runEvenGame;
