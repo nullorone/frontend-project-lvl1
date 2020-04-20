@@ -1,4 +1,4 @@
-import getGameData from '../index.js';
+import engine from '../index.js';
 import generateNumberOfRange from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
@@ -18,16 +18,23 @@ const getQuestionAnswer = () => {
   const start = generateNumberOfRange(1, 100);
   const step = generateNumberOfRange(1, 10);
   const length = 10;
-  const index = generateNumberOfRange(0, 9);
+  const indexLengthMax = length - 1;
+  const index = generateNumberOfRange(0, indexLengthMax);
   const progression = getProgression(start, step, length);
 
-  const answer = progression.splice(index, 1, charForReplacementProgressionItem);
+  const progressionWithChar = [
+    ...progression.slice(0, index),
+    charForReplacementProgressionItem,
+    ...progression.slice(index + 1),
+  ];
 
-  const question = progression.join(' ');
+  const answer = progression[index];
+
+  const question = progressionWithChar.join(' ');
 
   return [answer.toString(), question];
 };
 
-const beginProgressionGame = () => getGameData(rule, getQuestionAnswer);
+const runProgressionGame = () => engine(rule, getQuestionAnswer);
 
-export default beginProgressionGame;
+export default runProgressionGame;
