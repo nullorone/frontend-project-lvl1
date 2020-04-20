@@ -22,9 +22,15 @@ const getQuestionAnswer = () => {
   const index = generateNumberOfRange(0, indexLengthMax);
   const progression = getProgression(start, step, length);
 
-  const answer = progression.splice(index, 1, charForReplacementProgressionItem);
+  const progressionWithChar = [
+    ...progression.slice(0, index),
+    charForReplacementProgressionItem,
+    ...progression.slice(index + 1),
+  ];
 
-  const question = progression.join(' ');
+  const answer = progression[index];
+
+  const question = progressionWithChar.join(' ');
 
   return [answer.toString(), question];
 };
