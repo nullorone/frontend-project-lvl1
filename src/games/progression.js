@@ -18,7 +18,8 @@ const getQuestionAnswer = () => {
   const start = generateNumberOfRange(1, 100);
   const step = generateNumberOfRange(1, 10);
   const length = 10;
-  const index = generateNumberOfRange(0, 9);
+  const indexLengthMax = length - 1;
+  const index = generateNumberOfRange(0, indexLengthMax);
   const progression = getProgression(start, step, length);
 
   const answer = progression.splice(index, 1, charForReplacementProgressionItem);
